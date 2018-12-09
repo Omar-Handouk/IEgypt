@@ -18,7 +18,7 @@
         <br />
 
         <asp:Label runat="server" Text="Password" />
-        <asp:TextBox runat="server" ID="userPassword" placeholder="Enter Email" />
+        <asp:TextBox runat="server" ID="userPassword" placeholder="Enter Password" />
 
         <br />
         <br />

@@ -40,6 +40,23 @@ public partial class Login : System.Web.UI.Page
             {
                 UID = Convert.ToInt32(DB_COMMAND.Parameters["@user_id"].Value);
             }
+
+            string UType = userType(UID);
+
+            Session["ID"] = UID;
+            Session["type"] = UType;
+
+            HttpCookie userIDCookie = new HttpCookie("userID");
+            userIDCookie.Value = UID.ToString();
+
+            HttpCookie userTypeCookie = new HttpCookie("userType");
+            userTypeCookie.Value = UType;
+
+            Response.Cookies.Add(userIDCookie);
+            Response.Cookies.Add(userTypeCookie);
+
+            Response.Redirect("Default.aspx?type=" + UType + "&ID=" + UID);
+
         }
         catch (SqlException ex)
         {
@@ -47,24 +64,8 @@ public partial class Login : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            System.Web.HttpContext.Current.Response.Write("<script>alert('" + ex.Message + "')</script>");
+            Debug.Write(ex.Message);
         }
-
-        string UType = userType(UID);
-
-        Session["ID"] = UID;
-        Session["type"] = UType;
-
-        HttpCookie userIDCookie = new HttpCookie("userID");
-        userIDCookie.Value = UID.ToString();
-
-        HttpCookie userTypeCookie = new HttpCookie("userType");
-        userTypeCookie.Value = UType;
-
-        Response.Cookies.Add(userIDCookie);
-        Response.Cookies.Add(userTypeCookie);
-
-        Response.Redirect("Default.aspx?type=" + UType + "&ID=" + UID);
 
         DB_CONNETION.Close();
     }

@@ -9,7 +9,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:Button runat="server" Text="Login" ID="loginButton" OnClick="loginButton_Click" />
+        <asp:Button runat="server" Text="Login" ID="loginButton" OnClick="loginButton_Click" Enabled="true"/>
+        <asp:Button ID="logoutButton" runat="server" Text="Logout" Enabled="false" OnClick="logoutButton_Click"/>
         <asp:Button runat="server" Text="Register" ID="registerButton" OnClick="registerButton_Click" />
         <asp:Button runat="server" Text="Search" ID="searchButton" OnClick="searchButton_Click" />
     </div>
