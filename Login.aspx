@@ -9,7 +9,21 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
+        <h1>User Login</h1>
+        <hr />
+        <asp:Label runat="server" Text="Email" />
+        <asp:TextBox runat="server" ID="userEmail" placeholder="Enter Email" />
+        
+        <br />
+        <br />
+
+        <asp:Label runat="server" Text="Password" />
+        <asp:TextBox runat="server" ID="userPassword" placeholder="Enter Email" />
+
+        <br />
+        <br />
+
+        <asp:Button runat="server" ID="login" Text="Login" OnClick="login_Click" />
     </div>
     </form>
 </body>
