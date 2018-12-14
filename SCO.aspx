@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Search for Contributor and Original Content</title>
 </head>
 <body>
     <form id="show_OriginalContent_Contributors" runat="server">

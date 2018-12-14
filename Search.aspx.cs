@@ -167,7 +167,7 @@ public partial class Search : System.Web.UI.Page {
 
     protected void contentType_SelectedIndexChanged(object sender, EventArgs e)
     {
-        
+        System.Diagnostics.Debug.WriteLine(contentType.SelectedItem.Value);
     }
 
     protected void contentCategory_SelectedIndexChanged(object sender, EventArgs e)

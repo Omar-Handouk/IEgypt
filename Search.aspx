@@ -15,7 +15,7 @@
             <br />
             
             <asp:Label runat="server" Text="Content Type" />
-            <asp:dropdownlist runat="server" ID="contentType" OnSelectedIndexChanged="contentType_SelectedIndexChanged">
+            <asp:dropdownlist runat="server" ID="contentType" OnSelectedIndexChanged="contentType_SelectedIndexChanged" AutoPostBack="true">
             </asp:dropdownlist>
             
             <br />
