@@ -1,0 +1,25 @@
+Register_User Procedure:
+Added a raise error for password handling
+Highest_rating_original_content:
+Added ORDER BY
+Order_Contributor:
+FROM User, Contributor instead of Contributor only
+User_Login:
+Changed if conditional (If an email is not found throw user is not registered or email is wrong)
+If the mail is correct throw password is wrong exception
+If an is inactive throw exception
+CHECK THE WHOLE PROC (It was all wrong)
+MM-DD-YYYY
+Added active = 1 if a user decativated and re activated within 2 weeks
+Edit_Profile:
+The whole procedure is wrong
+Viewer_upload_event_photo & Viewer_upload_event_video:
+Put RAISERROR
+Comment Table:
+Remove the length constraint
+WriteComment.aspx needs better error handling
+-----
+Notes:
+Handle Login Logout (Done)
+Make a procedure to get user type (Done)
+Styling
